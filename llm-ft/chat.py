@@ -34,7 +34,6 @@ while True:
     if question.lower() == 'exit':
         break
 
-    # 准备输入
     inputs = tokenizer(
         question,
         return_tensors="pt",
@@ -54,10 +53,8 @@ while True:
             pad_token_id=tokenizer.eos_token_id
         )
 
-    # 解码回答
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-    # 打印回答
     print(f"模型：{response}")
 
 print("对话结束。")
