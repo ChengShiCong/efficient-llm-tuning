@@ -17,9 +17,9 @@ with open(csv_path, "r", encoding="utf-8") as f_csv, open(output_jsonl_path, "w"
 
         prompt = f"请对下面文本进行情感分析：{text}"
         if label == "1":
-            completion = "这是正面回答"
+            completion = "正面"
         else:
-            completion = "这是负面回答"
+            completion = "负面"
 
         sample = {
             "prompt": prompt,
