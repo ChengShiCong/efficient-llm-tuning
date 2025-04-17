@@ -4,7 +4,7 @@ from peft import PeftModel
 
 # 路径配置
 base_model_path = "/root/autodl-tmp/llm-ft/models/hub/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-1.5B/snapshots/ad9f0ae0864d7fbcd1cd905e3c6c5b069cc8b562"
-adapter_path = ""  # 请替换为你的adapter路径，如果不需要adapter则留空
+adapter_path = ""  # 替换为adapter路径，如果不需要adapter则留空
 device = "cuda" if torch.cuda.is_available() else "cpu"
 MAX_LENGTH = 1024
 
